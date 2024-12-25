@@ -1,0 +1,140 @@
+@use '../variables' as *;
+@use "sass:color";
+
+.checkout-page {
+  padding: 2rem;
+  background-color: $light-bg;
+  min-height: calc(100vh - 64px);
+
+  .checkout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .checkout-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      .checkout-form {
+        .form-section {
+          margin-bottom: 2rem;
+          padding-bottom: 2rem;
+          border-bottom: 1px solid $light-bg;
+
+          h2 {
+            margin-bottom: 1.5rem;
+            color: $text-color;
+          }
+
+          .secure-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #f0fdf4;
+            color: #16a34a;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+          }
+        }
+
+        .form-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+
+          @media (max-width: 480px) {
+            grid-template-columns: 1fr;
+          }
+
+          .form-group {
+            &.full-width {
+              grid-column: 1 / -1;
+            }
+
+            label {
+              display: block;
+              margin-bottom: 0.5rem;
+              color: $text-color;
+              font-weight: 500;
+            }
+
+            input,
+            select {
+              width: 100%;
+              padding: 0.75rem;
+              border: 1px solid #e5e7eb;
+              border-radius: 0.375rem;
+              font-size: 1rem;
+
+              &:focus {
+                outline: none;
+                border-color: $primary-color;
+                box-shadow: 0 0 0 2px rgba($primary-color, 0.1);
+              }
+            }
+
+            input[type="checkbox"] {
+              width: auto;
+              margin-right: 0.5rem;
+            }
+          }
+        }
+
+        .place-order-button {
+          width: 100%;
+          padding: 1rem;
+          background-color: $primary-color;
+          color: white;
+          border: none;
+          border-radius: 0.5rem;
+          font-size: 1.1rem;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: $secondary-color;
+          }
+        }
+      }
+
+      .order-summary {
+        background: $light-bg;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        height: fit-content;
+
+        h2 {
+          margin-bottom: 1.5rem;
+          color: $text-color;
+        }
+
+        .summary-details {
+          .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            
+            &.total {
+              margin-top: 1rem;
+              padding-top: 1rem;
+              border-top: 1px solid #e5e7eb;
+              font-weight: 600;
+              font-size: 1.25rem;
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+} 

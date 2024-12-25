@@ -1,0 +1,33 @@
+// Brand Colors
+$primary-color: #8B5E3C;    // Warm brown
+$secondary-color: #4A6741;  // Forest green
+$accent-color: #D4AF37;     // Gold
+
+// Text Colors
+$text-color: #2C1810;      // Deep brown
+$text-light: #666666;      // Light gray for paragraphs
+
+// Background Colors
+$light-bg: #F5F1EA;        // Beige
+$dark-bg: #1A1A1A;         // Almost black
+$cream-bg: #FDF8F3;        // Cream
+
+// Utility Colors
+$success-color: #4A6741;   // Green
+$error-color: #A94442;     // Red
+$warning-color: #8A6D3B;   // Brown
+
+// Export variables
+:export {
+  primaryColor: $primary-color;
+  secondaryColor: $secondary-color;
+  accentColor: $accent-color;
+  textColor: $text-color;
+  textLight: $text-light;
+  lightBg: $light-bg;
+  darkBg: $dark-bg;
+  creamBg: $cream-bg;
+  successColor: $success-color;
+  errorColor: $error-color;
+  warningColor: $warning-color;
+} 
